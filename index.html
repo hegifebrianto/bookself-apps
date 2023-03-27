@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        input[type=text],
+        [type=number],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .action-card {
+            margin-top: -10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border-radius: 10px;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+        .hidden-card {
+            display: none;
+        }
+        .margin-auto {
+            margin: auto;
+        }
+        .margin-top10 {
+            margin-top: 10px;
+        }
+        .margin-top20 {
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <title>Bookself App</title>
+    <div>
+        <header>
+            <h1>Add Book</h1>
+        </header>
+        <form id="formAddBook" action="" method="post">
+            <label for="title">Book Title </label>
+            <input type="text" id="title" name="title" placeholder="Book Title ..">
+
+            <label for="author">Authored By</label>
+            <input type="text" id="author" name="author" placeholder="Authored By  ..">
+
+            <label for="year">Tahun Buku Terbit</label>
+            <input type="number" id="year" name="year" placeholder="Published Year ..">
+
+            <select id="isRead" name="isRead">
+                <option value=true>Already Read</option>
+                <option value=false>Has not been Read</option>
+            </select>
+            <button type="submit" class="margin-top20"><i class='fa fa-file-text'></i> Submit</button>
+
+        </form>
+    </div>
+    <div class="search-form">
+        <header>
+            <h1>Find Book</h1>
+        </header>
+        <div>
+            <form id="formSearchBook" action="" method="post">
+                <label for="findBookId">Find Book</label>
+                <input type="text" id="findBookId" name="findBookId" placeholder="Find Book ..">
+                <button type="submit" class="search-button margin-top20"><i class='fa fa-arrow-right'></i> Find</button>
+                <button type="reset" class="reset-button margin-top20"><i class='fa fa-arrow-left'></i> Reset</button>
+            </form>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="left-container">
+            <h2 class="title">Already Read Book</h2>
+            <div id="readBooks">
+                <!-- <div class="card">
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-check"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+                <div class="card">
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div> -->
+            </div>
+        </div>
+        <div class="right-container">
+            <h2 class="title">Book Has not been Read</h2>
+            <div id="unreadBooks">
+                <!-- <div class="card">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
